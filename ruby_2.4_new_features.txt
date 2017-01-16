@@ -1,0 +1,33 @@
+binding.irb
+
+  No need of using pry from ruby 2.4 on wards to look around the code for debugging because ruby 2.4 comes with binding.irb feature which will enable and debugging the console for to look around the code.
+
+Example:
+
+2.4.0 :009 > def foo
+2.4.0 :010?>   array = [1,2,3,45]
+2.4.0 :011?>   binding.irb
+2.4.0 :012?>   end
+ => :foo 
+2.4.0 :013 > foo
+irb(main):001:0> array
+=> [1, 2, 3, 45]
+irb(main):002:0> array << "dfdfd"
+=> [1, 2, 3, 45, "dfdfd"]
+irb(main):003:0> array
+=> [1, 2, 3, 45, "dfdfd"]
+
+Advantages - No need to install a gem called pry.
+
+Fixnum and Bignum classes into a single concrete class Integer
+
+  Advantages - Fixnum and Bignum is the implementation details of the language and no need to expose those details to outside the world.
+               Performace improvement to store the numbers.
+
+  Example:
+ 
+  2.4.0 :017 > 1.class
+  => Integer
+  2.4.0 :016 > (125*343434323567890898).class
+  => Integer
+
