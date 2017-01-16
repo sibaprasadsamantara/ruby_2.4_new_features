@@ -30,4 +30,9 @@ Fixnum and Bignum classes into a single concrete class Integer
   => Integer
   2.4.0 :016 > (125*343434323567890898).class
   => Integer
+ 
+  2.3.3 :001 > 1.class
+  => Fixnum 
+  2.3.3 :002 > (125*343434323567890898).class
+  => Bignum 
 
