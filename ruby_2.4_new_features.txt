@@ -38,4 +38,17 @@ Fixnum and Bignum classes into a single concrete class Integer
 
 Better Hashes
 
- This is achieved by modern processor caching improvements by focusing on data locality. 
+ Introduced Hash table improvement by using modern processor caching improvements by focusing on data locality. 
+
+String supports unicode case mappings instead of only ASCII case mappings.
+
+Performance Improvements
+
+  Array.max and Array.min are optimized to not create a temporary array under certain conditions.
+  Speed Up Instance variable access
+  Added Regexp#match? which matches regular expression without creating a back reference object and changing $~ to reduce object allocation
+
+Debugging
+
+ Ruby ignores exceptions in threads unless another thread explicitly joins them, report_on_exception = true to notice if a thread is died due to an unhandled exception.
+ Ruby 2.4's deadlock detection shows threads with their backtrace and dependent threads.
