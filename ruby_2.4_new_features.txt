@@ -36,3 +36,6 @@ Fixnum and Bignum classes into a single concrete class Integer
   2.3.3 :002 > (125*343434323567890898).class
   => Bignum 
 
+Better Hashes
+
+ This is achieved by modern processor caching improvements by focusing on data locality. 
